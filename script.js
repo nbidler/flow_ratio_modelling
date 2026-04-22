@@ -17,3 +17,40 @@
  *  b. the 'tiles' it occupies are by defintion in only one of two orientations, but it can face 2 ways in each. does this interface badly near the edge of the allowed 'field'?
  *
  */
+
+const orientation = Object.freeze({
+    NORTH: 'up',
+    EAST: 'right',
+    SOUTH: 'down',
+    WEST: 'left',
+    UP: 'north',
+    RIGHT: 'east',
+    DOWN: 'south',
+    LEFT: 'west'
+});
+
+class board_tile{
+    //empty for moment, intended to mark unused space
+}
+
+class transport_parent{
+
+}
+
+
+class board_state {
+    //20 by 20 'board'
+
+
+    constructor() {
+
+    }
+
+
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  //rest of code goes inside here, so to speak
+});
+
