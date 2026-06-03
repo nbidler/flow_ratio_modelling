@@ -33,7 +33,7 @@ class board_tile{
     //empty for moment, intended to mark unused space
 }
 
-class transport_parent{
+class transport_parent extends board_tile{
 
 }
 
@@ -52,5 +52,29 @@ class board_state {
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
   //rest of code goes inside here, so to speak
+  const initial_board_state = [
+  [00, 01, 02, 03, 04, 05, 06, 07, 08, 09],
+  [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+  [50, 51, 52, 53, 54, 55, 56, 57, 58, 59],
+  [60, 61, 62, 63, 64, 65, 66, 67, 68, 69],
+  [70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
+  [80, 81, 82, 83, 84, 85, 86, 87, 88, 89],
+  [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+    ];
+
+    //this *should* populate every cell with a matching number
+    for (let column=0; column<10; column++) {
+        let current_row = document.createElement("tr");
+        for (let row=0; row<10; row++) {
+            let item = document.createElement("td");
+            item.textContent = initial_board_state[column][row];
+            current_row.appendChild(item);
+        }
+        document.getElementById("board_area").appendChild(current_row);
+    }
+
 });
 
